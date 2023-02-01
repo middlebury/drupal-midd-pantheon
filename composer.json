@@ -59,6 +59,19 @@
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/core": {
+                "Upcast type-hinted views arguments": "https://git.drupalcode.org/project/drupal/-/merge_requests/1323.diff",
+                "Refactor Xss::attributes() to allow filtering of style attribute values": "https://www.drupal.org/files/issues/2021-09-22/core-9.2-xss-refactor_filter_attributes-3109650-43.patch",
+                "Access to 'Reset to alphabetical' denied for users without administer permission": "https://www.drupal.org/files/issues/2020-10-17/updated_files-2984504-28.patch",
+                "Add option to show only start or end date in the DateTime Range custom formatter": "https://www.drupal.org/files/issues/2018-05-23/drupal-display-one-date-formatter-2827055-25.patch",
+                "Allow menu items which link to unpublished nodes to be selected in the parent item selector": "https://www.drupal.org/files/issues/2021-07-09/2807629-45.patch",
+                "Support RSS feed enclosures": "https://www.drupal.org/files/issues/2021-07-01/views-rss-fields-enclosure-2511878-35.patch",
+                "Add a hook to modify oEmbed resource data": "https://www.drupal.org/files/issues/2022-01-05/3042423-52.patch",
+                "Fix modals in layout builder": "https://www.drupal.org/files/issues/2021-09-30/3065095-31.patch",
+                "Views contextual filter's title override is invisible to TitleResolver": "https://www.drupal.org/files/issues/2021-07-16/2787051-9.2-59.patch"
+            }
         }
     },
     "autoload": {
