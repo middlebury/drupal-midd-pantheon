@@ -1,0 +1,14 @@
+name: midd-pantheon
+
+tooling:
+  # Disable code pulls from the Pantheon repository.
+  # We want to use our Github repo as our origin rather than
+  # the Pantheon site's own repo.
+  pull:
+    description: Pull things except code
+    options:
+      code:
+        default: none
+  # Disable push. We don't want to push local database and file change up
+  # to Pantheon, just one-way pulling down.
+  push: disabled
