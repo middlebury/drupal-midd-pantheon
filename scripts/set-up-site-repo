@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# This script adds a patheon site-repository as a git remote.
+
+# Get to our drupal project root.
+cd $(dirname $( dirname -- "$0" ))
+
+# Make sure we don't have the Pantheon site-repository as our origin.
+if [ `git remote | grep "origin	ssh://codeserver.dev."` ]; then
+  echo "It looks like you cloned from the Pantheon site-repository instead of Github:"
+  git remote -v
+  echo ""
+  echo "Clone from github instead, then we can use $0"
+  echo "to set up the Pantheon site-repository as a remote called 'site'."
+  exit 1;
+fi
+
+# Make sure that we've run `lando init` and the .lando.yml exists.
+if [ ! -f .lando.yml ]; then
+  echo "No .lando.yml found. Please run:";
+  echo "lando init --source cwd --recipe pantheon --code none";
+  exit 1;
+fi
+
+if [ ! `git remote | grep site` ]; then
+  siteId=`grep "id: " .lando.yml | sed -E "s/ +id: +//"`
+  # make sure we have a site id
+  if [ -z "$siteId" ]; then
+    echo "No Pantheon site id found in .lando.yml"
+    echo "Did you run the init command?"
+    echo "lando init --source cwd --recipe pantheon --code none";
+    exit 1;
+  fi
+
+  # Add our remote and fetch from it.
+  git remote add site "ssh://codeserver.dev.${siteId}@codeserver.dev.${siteId}.drush.in:2222/~/repository.git"
+  echo "Added Pantheon site-repository as a remote:"
+  git remote -v
+  echo ""
+  git fetch site
+fi
