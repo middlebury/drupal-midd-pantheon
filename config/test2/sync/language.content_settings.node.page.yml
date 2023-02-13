@@ -1,0 +1,18 @@
+uuid: 8f9b8dc1-50f2-4b08-8ac2-698fa26ed5ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: BCybzFDou7Yq55SwRpkcNUWrOZlb0ofNBqhZCDlKdhs
+id: node.page
+target_entity_type_id: node
+target_bundle: page
+default_langcode: site_default
+language_alterable: true
