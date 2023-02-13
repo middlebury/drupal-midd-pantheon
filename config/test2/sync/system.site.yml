@@ -2,9 +2,9 @@ _core:
   default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
 langcode: en
 uuid: 6415e25a-21c2-480e-9864-97eb0413d467
-name: 'Umami Food Magazine'
-mail: afranco@middlebury.edu
-slogan: ''
+name: 'Midd Test2 Umami'
+mail: webmaster@middlebury.edu
+slogan: 'My custom upstream testing site.'
 page:
   403: ''
   404: ''
