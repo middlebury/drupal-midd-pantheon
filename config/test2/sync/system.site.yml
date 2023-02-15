@@ -4,7 +4,7 @@ langcode: en
 uuid: 6415e25a-21c2-480e-9864-97eb0413d467
 name: 'Midd Test2 Umami'
 mail: webmaster@middlebury.edu
-slogan: 'My custom upstream testing site.'
+slogan: 'My custom upstream testing site - a1.'
 page:
   403: ''
   404: ''
