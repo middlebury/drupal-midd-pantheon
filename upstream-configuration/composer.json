@@ -12,7 +12,8 @@
         "drupal/core-recommended": "9.4.9",
         "drupal/ctools": "3.13",
         "drupal/paragraphs": "^1.15",
-        "drupal/diff": "1.1"
+        "drupal/diff": "1.1",
+        "pantheon-quicksilver/drush-config-import": "dev-main"
     },
     "require-dev": {
         "drupal/core-dev": "9.4.9"
