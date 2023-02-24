@@ -32,3 +32,11 @@ $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
 }
+
+/**
+ * Midd: Set our configuration directory based on the PANTHEON_SITE_NAME.
+ *
+ * The PANTHEON_SITE_NAME environment variable is available on both the Pantheon
+ * infrastructure as well as within the Lando/Docker local environment.
+ */
+$settings['config_sync_directory'] = '../config/'.preg_replace('/^midd-/', '', $_ENV['PANTHEON_SITE_NAME']).'/sync/';
