@@ -11,6 +11,10 @@
         {
             "type": "path",
             "url": "upstream-configuration"
+        },
+        "middlebury/midd-frontend": {
+          "type": "vcs",
+          "url": "https://github.com/middlebury/midd-frontend.git"
         }
     ],
     "require": {
@@ -20,6 +24,7 @@
         "drupal/core-recommended": "^9.2",
         "pantheon-systems/drupal-integrations": "^9",
         "cweagans/composer-patches": "^1.7",
+        "middlebury/midd-frontend": "dev-master-dist",
         "drush/drush": "^11 || ^12"
     },
     "require-dev": {
